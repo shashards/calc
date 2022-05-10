@@ -1,3 +1,5 @@
+// Aritmetic Operators
+
 // Addition
 
 const addition = function(a, b){
@@ -38,8 +40,7 @@ const operate = function(operatorValue, a, b){
 };
 
 
-
-// Holding Values
+// Holding Variables
 
 let displayValue = "0";
 let displayHistory = "";
@@ -47,7 +48,7 @@ let firstValue = undefined;
 let secondValue = undefined;
 let operatorValue = undefined;
 
-// Obtain buttons and elements
+// Obtain Elements
 
 const numBtns = document.querySelectorAll('[data-number]');
 const currentNumScreen = document.querySelector('.current-number');
@@ -59,7 +60,7 @@ const equalBtn = document.querySelector('#equal');
 
 currentNumScreen.innerText = displayValue
 
-// Number pressed functions
+// Number Functions
 
 const numPressedFirst = (e) => {
     currentNumScreen.innerText = displayValue = "";
@@ -88,7 +89,7 @@ const numPressed = (e) => {
 
 numBtns.forEach(btn => btn.addEventListener('click', numPressed));
 
-// Operator pressed fucntions
+// Operator Pressed Function
 
 const operatorPressed = (e) => {
     operatorValue = e.target.textContent;
@@ -100,7 +101,7 @@ const operatorPressed = (e) => {
 
 opBtns.forEach(btn => btn.addEventListener('click', operatorPressed));
 
-// Equals pressed functions 
+// Equals Pressed Function
 
 const equalPressed = (e) => {
     previousNumScreen.innerText = displayHistory + " " + secondValue;
@@ -109,3 +110,6 @@ const equalPressed = (e) => {
 }
 
 equalBtn.addEventListener('click', equalPressed);
+
+
+// Clear Pressed Function
