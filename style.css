@@ -29,6 +29,10 @@ body {
     margin-bottom: 20px;
 }
 
+.previous-number {
+    min-height: 20px;
+}
+
 .current-number {
     min-height: 40px;
     font-size: 30px;
