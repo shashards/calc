@@ -37,6 +37,16 @@ const operate = function(operatorValue, a, b){
     };
 };
 
+
+
+// Holding Values
+
+let displayValue = "0";
+let displayHistory = "";
+let firstValue = undefined;
+let secondValue = undefined;
+let operatorValue = undefined;
+
 // Obtain buttons and elements
 
 const numBtns = document.querySelectorAll('[data-number]');
@@ -45,20 +55,14 @@ const previousNumScreen = document.querySelector('.previous-number');
 const opBtns = document.querySelectorAll('[data-operator]');
 const equalBtn = document.querySelector('#equal');
 
+// Set zero values
 
-// Holding Values
-
-let displayValue = "";
-let displayHistory = "";
-let firstValue = undefined;
-let secondValue = undefined;
-let operatorValue = undefined;
+currentNumScreen.innerText = displayValue
 
 // Number pressed functions
 
-
-
 const numPressedFirst = (e) => {
+    currentNumScreen.innerText = displayValue = "";
     currentNumScreen.innerText += e.target.textContent;
     displayValue += e.target.textContent;
     displayValue = Number(displayValue);
